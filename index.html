@@ -24,8 +24,8 @@
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
 
     <!-- Customized Bootstrap Stylesheet -->
-    <!-- <script src="https://www.gstatic.com/firebasejs/9.20.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.20.0/firebase-auth.js"></script> -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap Icons -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css" rel="stylesheet">
@@ -36,31 +36,33 @@
 <body>
     <!-- Navbar Start -->
     <div class="container-fluid p-0">
-        <nav class="navbar navbar-expand-lg bg-white navbar-white py-3 py-lg-0 px-lg-5">
+        <nav class="navbar navbar-expand-lg bg-white navbar-light py-3 py-lg-0 px-lg-5">
             <a href="index.html" class="navbar-brand ml-lg-3">
                 <h1 class="m-0 text-uppercase text-primary">
                     <i class="fa fa-book-reader mr-3"></i>Mobile Edu
                 </h1>
             </a>
-            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+    
+            <!-- Navbar Toggler for Mobile View -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+    
             <div class="collapse navbar-collapse justify-content-between px-lg-3" id="navbarCollapse">
                 <div class="navbar-nav mx-auto py-0">
                     <a href="index.html" class="nav-item nav-link active">Home</a>
                     <a href="about.html" class="nav-item nav-link">About</a>
                     <a href="course.html" class="nav-item nav-link">Courses</a>
-                    <a href="testimonial.html" class="nav-item nav-link"> Testimonial</a>
+                    <a href="testimonial.html" class="nav-item nav-link">Testimonial</a>
                     <a href="detail.html" class="nav-item nav-link">Details</a>
                     <a href="feature.html" class="nav-item nav-link">Features</a>
                     <a href="team.html" class="nav-item nav-link">Team</a>
                     <a href="contact.html" class="nav-item nav-link">Contact</a>
                 </div>
             </div>
+        </nav>
     </div>
-    </nav>
-    </div>
-    <!-- Navbar End -->
+    <!-- Navber ends -->
 
     <!-- Header Start -->
     <div class="jumbotron jumbotron-fluid position-relative overlay-bottom" style="margin-bottom: 90px">
@@ -354,31 +356,27 @@
                       </div>
                     </div>
         
-                    <div class="col-sm-6">
-                      <button id="openModal" class="btn btn-primary btn-block" type="submit" style="height: 60px;">
+                    <button id="openModal" class="btn btn-primary btn-block" type="button" style="height: 60px;">
                         Sign Up Now
-                      </button>
-        
-                      <!-- Modal Structure -->
-                      <div class="modal fade" id="successModal" tabindex="-1" aria-hidden="true">
+                    </button>
+            
+                    <div class="modal fade" id="successModal" tabindex="-1" aria-hidden="true">
                         <div class="modal-dialog modal-dialog-centered">
-                          <div class="modal-content">
-                            <div class="modal-header">
-                              <i class="bi bi-emoji-smile-fill success-icon"></i>
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <i class="bi bi-emoji-smile-fill success-icon"></i>
+                                    <h5 class="modal-title ms-2">Registration Successful!</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Congratulations! You've successfully registered.</p>
+                                    <p>Welcome to the platform!</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-success" data-bs-dismiss="modal">OK</button>
+                                </div>
                             </div>
-                            <div class="modal-body">
-                              <h5 class="modal-title">Registration Successful!</h5>
-                              <p>Congratulations! You've successfully registered.</p>
-                              <p>Welcome to the platform!</p>
-                            </div>
-                            <div class="modal-footer">
-                              <button type="button" class="btn btn-success" data-bs-dismiss="modal">OK</button>
-                            </div>
-                          </div>
                         </div>
-                      </div>
-        
-                    </div>
                   </div>
                 </form>
               </div>
@@ -490,33 +488,51 @@
                         <h1 class="display-4">Send Us A Message</h1>
                     </div>
                     <div class="contact-form">
-                        <form>
+                        <form id="signUpForm">
                             <div class="row">
                                 <div class="col-6 form-group">
-                                    <input type="text"
-                                        class="form-control border-top-0 border-right-0 border-left-0 p-0"
-                                        placeholder="Your Name" required="required" />
+                                    <input type="text" class="form-control border-top-0 border-right-0 border-left-0 p-0"
+                                           placeholder="Your Name" required="required" />
                                 </div>
                                 <div class="col-6 form-group">
-                                    <input type="email"
-                                        class="form-control border-top-0 border-right-0 border-left-0 p-0"
-                                        placeholder="Your Email" required="required" />
+                                    <input type="email" class="form-control border-top-0 border-right-0 border-left-0 p-0"
+                                           placeholder="Your Email" required="required" />
                                 </div>
                             </div>
                             <div class="form-group">
                                 <input type="text" class="form-control border-top-0 border-right-0 border-left-0 p-0"
-                                    placeholder="Subject" required="required" />
+                                       placeholder="Subject" required="required" />
                             </div>
                             <div class="form-group">
                                 <textarea class="form-control border-top-0 border-right-0 border-left-0 p-0" rows="5"
-                                    placeholder="Message" required="required"></textarea>
+                                          placeholder="Message" required="required"></textarea>
                             </div>
                             <div>
-                                <button class="btn btn-primary py-3 px-5" type="submit">
-                                    Send Message
+                                <button id="openModall" class="btn btn-primary btn-block" type="button" style="height: 60px;">
+                                    Sign Up Now
                                 </button>
                             </div>
                         </form>
+                    
+                        <!-- Modal Structure -->
+                        <div class="modal fade" id="successModal" tabindex="-1" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <i class="bi bi-emoji-smile-fill success-icon"></i>
+                                        <h5 class="modal-title ms-2">Registration Successful!</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>Congratulations! You've successfully registered.</p>
+                                        <p>Welcome to the platform!</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-success" data-bs-dismiss="modal">OK</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -610,38 +626,25 @@
         </div>
     </div>
     <!-- Footer End -->
-
-    <!-- Back to Top -->
-    <!-- Bootstrap JS and Popper.js -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
-  
     <script>
-      document.getElementById('signUpForm').addEventListener('submit', function (e) {
-        e.preventDefault(); // Prevent form submission from reloading the page
-  
-        // Show the modal when the form is submitted
+        document.getElementById('openModal').addEventListener('click', function () {
+            const successModal = new bootstrap.Modal(document.getElementById('successModal'));
+            successModal.show();
+        });
+
+        document.getElementById('openModall').addEventListener('click', function (e) {
+        e.preventDefault(); // Prevent form submission
         const successModal = new bootstrap.Modal(document.getElementById('successModal'));
         successModal.show();
-  
-        // Optional: Add behavior after modal dismissal
-        const modalElement = document.getElementById('successModal');
-        modalElement.addEventListener('hidden.bs.modal', function () {
-          console.log("User closed the modal. Continue browsing.");
-          // Additional logic after closing, e.g., redirect or show another section
-        });
-      });
-      document.getElementById('openModal').addEventListener('click', function () {
-      const successModal = new bootstrap.Modal(document.getElementById('successModal'));
-      successModal.show();
-
-      // Handle logic after modal is dismissed
-      document.getElementById('successModal').addEventListener('hidden.bs.modal', function () {
-        console.log("Modal closed. User can continue browsing.");
-        // Optional: Add additional actions like redirecting to another page if needed
-      });
     });
     </script>
+    <!-- Back to Top -->
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+
+
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>

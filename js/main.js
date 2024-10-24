@@ -137,3 +137,31 @@ import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, si
     });
     
 })(jQuery);
+
+// Handle form submission for sign-up
+document.getElementById('signUpForm').addEventListener('submit', function (e) {
+    e.preventDefault(); // Prevent form submission from reloading the page
+
+    // Show the success modal when the form is submitted
+    const successModal = new bootstrap.Modal(document.getElementById('successModal'));
+    successModal.show();
+
+    // Optional: Add behavior after modal dismissal
+    const modalElement = document.getElementById('successModal');
+    modalElement.addEventListener('hidden.bs.modal', function () {
+        console.log("User closed the modal. Continue browsing.");
+        // Additional logic after closing, e.g., redirect or show another section
+    }, { once: true }); // Ensure this runs only once to avoid multiple triggers
+});
+
+// Handle button click to open modal directly
+document.getElementById('openModal').addEventListener('click', function () {
+    const successModal = new bootstrap.Modal(document.getElementById('successModal'));
+    successModal.show();
+
+    // Handle logic after modal is dismissed
+    document.getElementById('successModal').addEventListener('hidden.bs.modal', function () {
+        console.log("Modal closed. User can continue browsing.");
+        // Optional: Add additional actions like redirecting to another page if needed
+    }, { once: true }); // Ensure this runs only once to avoid multiple triggers
+});

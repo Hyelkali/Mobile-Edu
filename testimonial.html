@@ -22,37 +22,48 @@
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 
     <!-- Customized Bootstrap Stylesheet -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    
+    <!-- jQuery (necessary for Owl Carousel) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <!-- Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
-      <!-- Navbar Start -->
+      
+    <!-- Navbar Start -->
     <div class="container-fluid p-0">
-        <nav class="navbar navbar-expand-lg bg-white navbar-white py-3 py-lg-0 px-lg-5">
+        <nav class="navbar navbar-expand-lg bg-white navbar-light py-3 py-lg-0 px-lg-5">
             <a href="index.html" class="navbar-brand ml-lg-3">
                 <h1 class="m-0 text-uppercase text-primary">
                     <i class="fa fa-book-reader mr-3"></i>Mobile Edu
                 </h1>
             </a>
-            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+    
+            <!-- Navbar Toggler for Mobile View -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+    
             <div class="collapse navbar-collapse justify-content-between px-lg-3" id="navbarCollapse">
                 <div class="navbar-nav mx-auto py-0">
                     <a href="index.html" class="nav-item nav-link ">Home</a>
-                    <a href="about.html" class="nav-item nav-link">About</a>
-                    <a href="course.html" class="nav-item nav-link">Courses</a>
-                    <a href="testimonial.html" class="nav-item nav-link active"> Testimonial</a>
+                    <a href="about.html" class="nav-item nav-link ">About</a>
+                    <a href="course.html" class="nav-item nav-link ">Courses</a>
+                    <a href="testimonial.html" class="nav-item nav-link active">Testimonial</a>
                     <a href="detail.html" class="nav-item nav-link">Details</a>
                     <a href="feature.html" class="nav-item nav-link">Features</a>
                     <a href="team.html" class="nav-item nav-link">Team</a>
                     <a href="contact.html" class="nav-item nav-link">Contact</a>
                 </div>
             </div>
+        </nav>
     </div>
-    </nav>
-    </div>
-    <!-- Navbar End -->
+    <!-- Navber ends -->
 
 
     <!-- Header Start -->
@@ -70,38 +81,37 @@
 
 
     <!-- Testimonial Start -->
-    <div class="container-fluid py-5">
-        <div class="container py-5">
-            <div class="row align-items-center">
-                <div class="col-lg-5 mb-5 mb-lg-0">
-                    <div class="section-title position-relative mb-4">
-                        <h6 class="d-inline-block position-relative text-secondary text-uppercase pb-2">Testimonial</h6>
-                        <h1 class="display-4">What Say Our Students</h1>
-                    </div>
-                    <p class="m-0">Dolor est dolores et nonumy sit labore dolores est sed rebum amet, justo duo ipsum sanctus dolore magna rebum sit et. Diam lorem ea sea at. Nonumy et at at sed justo est nonumy tempor. Vero sea ea eirmod, elitr ea amet diam ipsum at amet. Erat sed stet eos ipsum diam</p>
+<div class="container-fluid py-5">
+    <div class="container py-5">
+        <div class="row align-items-center">
+            <div class="col-lg-5 mb-5 mb-lg-0">
+                <div class="section-title position-relative mb-4">
+                    <h6 class="d-inline-block position-relative text-secondary text-uppercase pb-2">Testimonial</h6>
+                    <h1 class="display-4">What Our Students Say</h1>
                 </div>
-                <div class="col-lg-7">
-                    <div class="owl-carousel testimonial-carousel">
-                        <div class="bg-light p-5">
-                            <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
-                            <p>Sed et elitr ipsum labore dolor diam, ipsum duo vero sed sit est est ipsum eos clita est ipsum. Est nonumy tempor at kasd. Sed at dolor duo ut dolor, et justo erat dolor magna sed stet amet elitr duo lorem</p>
-                            <div class="d-flex flex-shrink-0 align-items-center mt-4">
-                                <img class="img-fluid mr-4" src="img/testimonial-2.jpg" alt="">
-                                <div>
-                                    <h5>Student Name</h5>
-                                    <span>Web Design</span>
-                                </div>
+                <p class="m-0">Our students have experienced tremendous growth and transformation through our courses. They have gained valuable skills and knowledge that empower them to excel in their careers and personal projects.</p>
+            </div>
+            <div class="col-lg-7">
+                <div class="owl-carousel testimonial-carousel">
+                    <div class="bg-light p-5">
+                        <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
+                        <p>“The web design course was incredibly insightful. I learned so much about the latest design trends and how to apply them practically. The instructors were knowledgeable and supportive throughout my learning journey.”</p>
+                        <div class="d-flex flex-shrink-0 align-items-center mt-4">
+                            <img class="img-fluid mr-4" src="https://images.pexels.com/photos/3762940/pexels-photo-3762940.jpeg" alt="Student Testimonial">
+                            <div>
+                                <h5>Jane Doe</h5>
+                                <span>Web Design</span>
                             </div>
                         </div>
-                        <div class="bg-light p-5">
-                            <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
-                            <p>Sed et elitr ipsum labore dolor diam, ipsum duo vero sed sit est est ipsum eos clita est ipsum. Est nonumy tempor at kasd. Sed at dolor duo ut dolor, et justo erat dolor magna sed stet amet elitr duo lorem</p>
-                            <div class="d-flex flex-shrink-0 align-items-center mt-4">
-                                <img class="img-fluid mr-4" src="img/testimonial-1.jpg" alt="">
-                                <div>
-                                    <h5>Student Name</h5>
-                                    <span>Web Design</span>
-                                </div>
+                    </div>
+                    <div class="bg-light p-5">
+                        <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
+                        <p>“I thoroughly enjoyed the digital marketing course! It provided me with practical skills and strategies that I could implement right away. I feel much more confident in my abilities now.”</p>
+                        <div class="d-flex flex-shrink-0 align-items-center mt-4">
+                            <img class="img-fluid mr-4" src="https://images.pexels.com/photos/3762941/pexels-photo-3762941.jpeg" alt="Student Testimonial">
+                            <div>
+                                <h5>John Smith</h5>
+                                <span>Digital Marketing</span>
                             </div>
                         </div>
                     </div>
@@ -109,7 +119,8 @@
             </div>
         </div>
     </div>
-    <!-- Testimonial Start -->
+</div>
+<!-- Testimonial End -->
 
 
 <!-- Footer Start -->
@@ -201,7 +212,18 @@
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary rounded-0 btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
-
+    <script>
+        $(document).ready(function(){
+            $(".testimonial-carousel").owlCarousel({
+                items: 1, // number of items to display
+                loop: true, // loop the items
+                margin: 10, // margin between items
+                autoplay: true, // enable autoplay
+                autoplayTimeout: 3000, // autoplay timeout duration
+                autoplayHoverPause: true // pause autoplay on hover
+            });
+        });
+        </script>
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>

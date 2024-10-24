@@ -31,33 +31,35 @@
 </head>
 
 <body>
-     <!-- Navbar Start -->
-     <div class="container-fluid p-0">
-        <nav class="navbar navbar-expand-lg bg-white navbar-white py-3 py-lg-0 px-lg-5">
-            <a href="index.html" class="navbar-brand ml-lg-3">
-                <h1 class="m-0 text-uppercase text-primary">
-                    <i class="fa fa-book-reader mr-3"></i>Mobile Edu
-                </h1>
-            </a>
-            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-between px-lg-3" id="navbarCollapse">
-                <div class="navbar-nav mx-auto py-0">
-                    <a href="index.html" class="nav-item nav-link ">Home</a>
-                    <a href="about.html" class="nav-item nav-link">About</a>
-                    <a href="course.html" class="nav-item nav-link">Courses</a>
-                    <a href="testimonial.html" class="nav-item nav-link"> Testimonial</a>
-                    <a href="detail.html" class="nav-item nav-link">Details</a>
-                    <a href="feature.html" class="nav-item nav-link">Features</a>
-                    <a href="team.html" class="nav-item nav-link active">Team</a>
-                    <a href="contact.html" class="nav-item nav-link">Contact</a>
-                </div>
-            </div>
-    </div>
-    </nav>
-    </div>
-    <!-- Navbar End -->
+    <!-- Navbar Start -->
+    <div class="container-fluid p-0">
+       <nav class="navbar navbar-expand-lg bg-white navbar-light py-3 py-lg-0 px-lg-5">
+           <a href="index.html" class="navbar-brand ml-lg-3">
+               <h1 class="m-0 text-uppercase text-primary">
+                   <i class="fa fa-book-reader mr-3"></i>Mobile Edu
+               </h1>
+           </a>
+   
+           <!-- Navbar Toggler for Mobile View -->
+           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+           </button>
+   
+           <div class="collapse navbar-collapse justify-content-between px-lg-3" id="navbarCollapse">
+               <div class="navbar-nav mx-auto py-0">
+                   <a href="index.html" class="nav-item nav-link ">Home</a>
+                   <a href="about.html" class="nav-item nav-link ">About</a>
+                   <a href="course.html" class="nav-item nav-link ">Courses</a>
+                   <a href="testimonial.html" class="nav-item nav-link">Testimonial</a>
+                   <a href="detail.html" class="nav-item nav-link">Details</a>
+                   <a href="feature.html" class="nav-item nav-link">Features</a>
+                   <a href="team.html" class="nav-item nav-link active">Team</a>
+                   <a href="contact.html" class="nav-item nav-link">Contact</a>
+               </div>
+           </div>
+       </nav>
+   </div>
+   <!-- Navber ends -->
 
 
     <!-- Header Start -->
@@ -82,69 +84,115 @@
                 <h6 class="d-inline-block position-relative text-secondary text-uppercase pb-2">Instructors</h6>
                 <h1 class="display-4">Meet Our Instructors</h1>
             </div>
-            <div class="owl-carousel team-carousel position-relative" style="padding: 0 30px;">
-                <div class="team-item">
-                    <img class="img-fluid w-100" src="img/team-1.jpg" alt="">
-                    <div class="bg-light text-center p-4">
-                        <h5 class="mb-3">Richack Vam/h5>
-                        <p class="mb-2">Web Design & Development</p>
-                        <div class="d-flex justify-content-center">
-                            <a class="mx-1 p-1" href="#"><i class="fab fa-twitter"></i></a>
-                            <a class="mx-1 p-1" href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a class="mx-1 p-1" href="#"><i class="fab fa-linkedin-in"></i></a>
-                            <a class="mx-1 p-1" href="#"><i class="fab fa-instagram"></i></a>
-                            <a class="mx-1 p-1" href="#"><i class="fab fa-youtube"></i></a>
+    
+            <div id="teamCarousel" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <!-- First Instructor -->
+                    <div class="carousel-item active">
+                        <div class="row justify-content-center">
+                            <div class="col-md-6 col-lg-4">
+                                <div class="team-item">
+                                    <img class="img-fluid w-100" src="img/team-1.jpg" alt="Instructor 1">
+                                    <div class="bg-light text-center p-4">
+                                        <h5 class="mb-3">Richack Vam</h5>
+                                        <p class="mb-2">Web Design & Development</p>
+                                        <div class="d-flex justify-content-center">
+                                            <a class="mx-1 p-1" href="#"><i class="fab fa-twitter"></i></a>
+                                            <a class="mx-1 p-1" href="#"><i class="fab fa-facebook-f"></i></a>
+                                            <a class="mx-1 p-1" href="#"><i class="fab fa-linkedin-in"></i></a>
+                                            <a class="mx-1 p-1" href="#"><i class="fab fa-instagram"></i></a>
+                                            <a class="mx-1 p-1" href="#"><i class="fab fa-youtube"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Second Instructor -->
+                    <div class="carousel-item">
+                        <div class="row justify-content-center">
+                            <div class="col-md-6 col-lg-4">
+                                <div class="team-item">
+                                    <img class="img-fluid w-100" src="img/team-2.jpg" alt="Instructor 2">
+                                    <div class="bg-light text-center p-4">
+                                        <h5 class="mb-3">Smith Nick</h5>
+                                        <p class="mb-2">Web Design & Development</p>
+                                        <div class="d-flex justify-content-center">
+                                            <a class="mx-1 p-1" href="#"><i class="fab fa-twitter"></i></a>
+                                            <a class="mx-1 p-1" href="#"><i class="fab fa-facebook-f"></i></a>
+                                            <a class="mx-1 p-1" href="#"><i class="fab fa-linkedin-in"></i></a>
+                                            <a class="mx-1 p-1" href="#"><i class="fab fa-instagram"></i></a>
+                                            <a class="mx-1 p-1" href="#"><i class="fab fa-youtube"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Third Instructor -->
+                    <div class="carousel-item">
+                        <div class="row justify-content-center">
+                            <div class="col-md-6 col-lg-4">
+                                <div class="team-item">
+                                    <img class="img-fluid w-100" src="img/team-3.jpg" alt="Instructor 3">
+                                    <div class="bg-light text-center p-4">
+                                        <h5 class="mb-3">Vivian Donald</h5>
+                                        <p class="mb-2">Web Design & Development</p>
+                                        <div class="d-flex justify-content-center">
+                                            <a class="mx-1 p-1" href="#"><i class="fab fa-twitter"></i></a>
+                                            <a class="mx-1 p-1" href="#"><i class="fab fa-facebook-f"></i></a>
+                                            <a class="mx-1 p-1" href="#"><i class="fab fa-linkedin-in"></i></a>
+                                            <a class="mx-1 p-1" href="#"><i class="fab fa-instagram"></i></a>
+                                            <a class="mx-1 p-1" href="#"><i class="fab fa-youtube"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Fourth Instructor -->
+                    <div class="carousel-item">
+                        <div class="row justify-content-center">
+                            <div class="col-md-6 col-lg-4">
+                                <div class="team-item">
+                                    <img class="img-fluid w-100" src="img/team-4.jpg" alt="Instructor 4">
+                                    <div class="bg-light text-center p-4">
+                                        <h5 class="mb-3">James Hol</h5>
+                                        <p class="mb-2">Web Design & Development</p>
+                                        <div class="d-flex justify-content-center">
+                                            <a class="mx-1 p-1" href="#"><i class="fab fa-twitter"></i></a>
+                                            <a class="mx-1 p-1" href="#"><i class="fab fa-facebook-f"></i></a>
+                                            <a class="mx-1 p-1" href="#"><i class="fab fa-linkedin-in"></i></a>
+                                            <a class="mx-1 p-1" href="#"><i class="fab fa-instagram"></i></a>
+                                            <a class="mx-1 p-1" href="#"><i class="fab fa-youtube"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <!-- Additional team-item divs... -->
-             <div class="team-item">
-                    <img class="img-fluid w-100" src="img/team-2.jpg" alt="">
-                    <div class="bg-light text-center p-4">
-                        <h5 class="mb-3">Smith Nick</h5>
-                        <p class="mb-2">Web Design & Development</p>
-                        <div class="d-flex justify-content-center">
-                            <a class="mx-1 p-1" href="#"><i class="fab fa-twitter"></i></a>
-                            <a class="mx-1 p-1" href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a class="mx-1 p-1" href="#"><i class="fab fa-linkedin-in"></i></a>
-                            <a class="mx-1 p-1" href="#"><i class="fab fa-instagram"></i></a>
-                            <a class="mx-1 p-1" href="#"><i class="fab fa-youtube"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="team-item">
-                    <img class="img-fluid w-100" src="img/team-3.jpg" alt="">
-                    <div class="bg-light text-center p-4">
-                        <h5 class="mb-3">Vivian Donald</h5>
-                        <p class="mb-2">Web Design & Development</p>
-                        <div class="d-flex justify-content-center">
-                            <a class="mx-1 p-1" href="#"><i class="fab fa-twitter"></i></a>
-                            <a class="mx-1 p-1" href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a class="mx-1 p-1" href="#"><i class="fab fa-linkedin-in"></i></a>
-                            <a class="mx-1 p-1" href="#"><i class="fab fa-instagram"></i></a>
-                            <a class="mx-1 p-1" href="#"><i class="fab fa-youtube"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="team-item">
-                    <img class="img-fluid w-100" src="img/team-4.jpg" alt="">
-                    <div class="bg-light text-center p-4">
-                        <h5 class="mb-3">James Hol</h5>
-                        <p class="mb-2">Web Design & Development</p>
-                        <div class="d-flex justify-content-center">
-                            <a class="mx-1 p-1" href="#"><i class="fab fa-twitter"></i></a>
-                            <a class="mx-1 p-1" href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a class="mx-1 p-1" href="#"><i class="fab fa-linkedin-in"></i></a>
-                            <a class="mx-1 p-1" href="#"><i class="fab fa-instagram"></i></a>
-                            <a class="mx-1 p-1" href="#"><i class="fab fa-youtube"></i></a>
-                        </div>
-                    </div>
-                </div>
+    
+                <!-- Carousel Controls -->
+                <a class="carousel-control-prev" href="#teamCarousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#teamCarousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
             </div>
         </div>
     </div>
-
-    <!-- Team End -->
+    
+    <!-- Bootstrap JS & jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    
 
 
    <!-- Footer Start -->

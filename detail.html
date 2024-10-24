@@ -22,37 +22,41 @@
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 
     <!-- Customized Bootstrap Stylesheet -->
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+
     <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
-     <!-- Navbar Start -->
-     <div class="container-fluid p-0">
-        <nav class="navbar navbar-expand-lg bg-white navbar-white py-3 py-lg-0 px-lg-5">
-            <a href="index.html" class="navbar-brand ml-lg-3">
-                <h1 class="m-0 text-uppercase text-primary">
-                    <i class="fa fa-book-reader mr-3"></i>Mobile Edu
-                </h1>
-            </a>
-            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-between px-lg-3" id="navbarCollapse">
-                <div class="navbar-nav mx-auto py-0">
-                    <a href="index.html" class="nav-item nav-link ">Home</a>
-                    <a href="about.html" class="nav-item nav-link">About</a>
-                    <a href="course.html" class="nav-item nav-link">Courses</a>
-                    <a href="testimonial.html" class="nav-item nav-link"> Testimonial</a>
-                    <a href="detail.html" class="nav-item nav-link active">Details</a>
-                    <a href="feature.html" class="nav-item nav-link">Features</a>
-                    <a href="team.html" class="nav-item nav-link">Team</a>
-                    <a href="contact.html" class="nav-item nav-link">Contact</a>
-                </div>
-            </div>
-    </div>
-    </nav>
-    </div>
-    <!-- Navbar End -->
+    <!-- Navbar Start -->
+    <div class="container-fluid p-0">
+       <nav class="navbar navbar-expand-lg bg-white navbar-light py-3 py-lg-0 px-lg-5">
+           <a href="index.html" class="navbar-brand ml-lg-3">
+               <h1 class="m-0 text-uppercase text-primary">
+                   <i class="fa fa-book-reader mr-3"></i>Mobile Edu
+               </h1>
+           </a>
+   
+           <!-- Navbar Toggler for Mobile View -->
+           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+           </button>
+   
+           <div class="collapse navbar-collapse justify-content-between px-lg-3" id="navbarCollapse">
+               <div class="navbar-nav mx-auto py-0">
+                   <a href="index.html" class="nav-item nav-link ">Home</a>
+                   <a href="about.html" class="nav-item nav-link ">About</a>
+                   <a href="course.html" class="nav-item nav-link ">Courses</a>
+                   <a href="testimonial.html" class="nav-item nav-link">Testimonial</a>
+                   <a href="detail.html" class="nav-item nav-link active">Details</a>
+                   <a href="feature.html" class="nav-item nav-link">Features</a>
+                   <a href="team.html" class="nav-item nav-link">Team</a>
+                   <a href="contact.html" class="nav-item nav-link">Contact</a>
+               </div>
+           </div>
+       </nav>
+   </div>
+   <!-- Navber ends -->
 
 
     <!-- Header Start -->
@@ -165,7 +169,7 @@
                         </div>
                         <h5 class="text-white py-3 px-4 m-0">Course Price: $199</h5>
                         <div class="py-3 px-4">
-                            <a class="btn btn-block btn-secondary py-3 px-5" data-toggle="modal" data-target="#successModal">Enroll Now</a>
+                            <button class="btn btn-block btn-secondary py-3 px-5" onclick="payWithPaystack()">Enroll Now</button>
                         </div>
                         
                         <!-- Success Modal -->
@@ -363,7 +367,27 @@
     <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/counterup/counterup.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-
+    
+    <script>
+        function payWithPaystack() {
+            var handler = PaystackPop.setup({
+                key: 'pk_test_b7119ababa4c222d181f6f412c19d84f41763541', // Replace with your Paystack public test key
+                email: 'student@example.com',   // Customer email
+                amount: 5000 * 100,             // Amount in kobo (e.g., 5000 = 50 Naira)
+                currency: 'NGN',                // Currency
+                ref: 'ENROLL_' + Math.floor((Math.random() * 1000000000) + 1), // Unique transaction reference
+                callback: function(response) {
+                    // Payment successful - show success modal
+                    $('#successModal').modal('show');
+                },
+                onClose: function() {
+                    alert('Payment was not completed, please try again.');
+                }
+            });
+            handler.openIframe();
+        }
+        </script>
+        
     <!-- Template Javascript -->
     <script type="module" src="https://www.gstatic.com/firebasejs/9.20.0/firebase-app.js"></script>
     <script type="module" src="https://www.gstatic.com/firebasejs/9.20.0/firebase-auth.js"></script>
